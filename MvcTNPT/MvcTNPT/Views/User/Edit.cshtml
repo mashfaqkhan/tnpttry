@@ -1,0 +1,35 @@
+﻿@using MvcTNPT.Models
+@model User
+@{
+    ViewBag.Title = "Edit user";
+}
+@using (Html.BeginForm())
+{
+    <table>
+        <tr>
+            <td>
+                First name
+            </td>
+            <td>
+                @Html.TextBoxFor(Model => Model.FirstName)
+            </td>
+        </tr>
+        <tr>
+            <td>
+                Last name
+            </td>
+            <td>
+                @Html.TextBoxFor(Model => Model.LastName)
+            </td>
+        </tr>
+        <tr>
+            <td>
+                Age
+            </td>
+            <td>
+                @Html.TextBoxFor(Model => Model.Age)
+            </td>
+        </tr>
+    </table>
+    <input type="submit" value="Save" />
+}
